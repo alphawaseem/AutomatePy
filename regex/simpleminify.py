@@ -1,7 +1,8 @@
-# import regex module
 import re
 
+regexObj = re.compile('\s+')
 
+text = '''Hello there     I have looot of    spacees and              too \n\
 # Make a regex object
 phoneNumRegex = re.compile(u'(\d{3})-?(\d{4}-\d{3})')
 
@@ -22,4 +23,8 @@ matchedObject = phoneNumRegex.findall(testString)
 if matchedObject:
     print(matchedObject)
 else:
-    print('No match found')
+    print('No match found')'''
+
+minified = regexObj.sub(' ', text)
+print(text)
+print(minified)
