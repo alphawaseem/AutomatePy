@@ -38,6 +38,10 @@ if text:
         matches.append(groups[0])
         print(groups[0])
 
-
+    if matches:
+        matches = '\n'.join(set(matches))
+        pyperclip.copy(matches)
+        print('Copied to clipboard')
+        print(matches)
 else:
     print('Please copy something to clipboard and try again.')
