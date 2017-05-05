@@ -21,11 +21,14 @@ NUM_OF_STUDENTS = 35
 
 for quizNum in range(NUM_OF_STUDENTS):
     # TODO: Create quiz and answer key files
+    quizFile = open('quiz%s.txt' % (quizNum + 1), 'w')
+    answerKeyFile = open('answerkey%s.txt' % (quizNum + 1), 'w')
 
     # TODO: Write out the header for the quiz
+    quizFile.write('Name: \n\nDate: \n\nID: \n\n')
+    quizFile.write((' ' * 20) + 'State Capitals Quiz Form %s' % (quizNum + 1))
+    quizFile.write('\n\n')
 
     # TODO: Shuffle the order of the states
 
     # TODO: Loop through all the 50 states, making a question for each
-
-
