@@ -30,5 +30,15 @@ for quizNum in range(NUM_OF_STUDENTS):
     quizFile.write('\n\n')
 
     # TODO: Shuffle the order of the states
+    states = list(capitals.keys())
+    random.shuffle(states)
+    print(states)
 
     # TODO: Loop through all the 50 states, making a question for each
+    for questionNum in range(50):
+        correctAnswer = capitals[states[questionNum]]
+        wronganswers = list(capitals.values())
+        del wronganswers[wronganswers.index(correctAnswer)]
+        wronganswers = random.sample(wronganswers, 3)
+        options = wronganswers + [correctAnswer]
+        random.shuffle(options)
