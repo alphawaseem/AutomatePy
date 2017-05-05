@@ -20,8 +20,8 @@ num_of_que = len(questionsList)
 
 for i in range(NUM_STUDENTS):
     random.shuffle(questionsList)
-    quizFileName = 'quiz%s' % (i + 1)
-    ansFileName = 'ansKey%s' % (i + 1)
+    quizFileName = 'quiz%s.txt' % (i + 1)
+    ansFileName = 'ansKey%s.txt' % (i + 1)
 
     quizFile = open(quizFileName, 'w')
     ansFile = open(ansFileName, 'w')
